@@ -5,7 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "start": "node index.js",
+    "login": "heroku login",
+    "create": "heroku create",
+    "open": "heroku open",
+    "creds": "heroku buildpacks:set https://github.com/buyersight/heroku-google-application-credentials-buildpack.git -a frozen-headland-24495"
   },
   "author": "",
   "license": "ISC",
@@ -13,5 +17,8 @@
     "express": "^4.18.2",
     "google-auth-library": "^8.7.0",
     "googleapis": "^118.0.0"
+  },
+  "devDependencies": {
+    "heroku": "^8.0.6"
   }
 }

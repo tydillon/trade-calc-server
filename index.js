@@ -2,7 +2,11 @@ const express = require("express");
 const { google } = require('googleapis')
 const sheets = google.sheets('v4');
 
+// export GOOGLE_APPLICATION_CREDENTIALS=./keys.json
+// export GCLOUD_PROJECT=tactile-cinema-384614
+
 const SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly']
+const spreadsheetId = process.env.SPREADSHEET_ID
 const sheetName = "Sheet1"
 const range = "A2:G"
 
