@@ -9,7 +9,8 @@
     "login": "heroku login",
     "create": "heroku create",
     "open": "heroku open",
-    "creds": "heroku buildpacks:set https://github.com/buyersight/heroku-google-application-credentials-buildpack.git -a frozen-headland-24495"
+    "creds": "heroku buildpacks:set https://github.com/buyersight/heroku-google-application-credentials-buildpack.git -a frozen-headland-24495",
+    "log": "heroku logs --tail"
   },
   "author": "",
   "license": "ISC",
