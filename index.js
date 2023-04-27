@@ -16,7 +16,7 @@ const PORT = process.env.PORT || 3001;
 const app = express();
 
 const corsOptions = {
-  origin: ['http://localhost:3000', 'https://trade-calculator-web.herokuapp.com/'],
+  origin: ['http://localhost:3000', 'https://trade-calculator-web.herokuapp.com'],
   optionsSuccessStatus: 200,
   allowedHeaders: ['Content-Type', 'Authorization'],
   exposedHeaders: ['Content-Type', 'Authorization', 'Access-Control-Allow-Origin'] // expose the header to the client
