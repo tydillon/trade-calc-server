@@ -52,6 +52,10 @@ const app = express();
 //   res.json(response);
 // });
 
+app.get("/", async (req,res) => {
+  res.json("You did it!")
+})
+
 app.listen(PORT, () => {
   console.log(`Server listening on ${PORT}`);
   console.log("Spreadsheet Id: " + spreadsheetId)
