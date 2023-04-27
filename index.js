@@ -54,7 +54,7 @@ const app = express();
 
 app.listen(PORT, () => {
   console.log(`Server listening on ${PORT}`);
-  console.log("Spreadsheet ID: " + spreadsheetId)
+  console.log("Spreadsheet Id: " + spreadsheetId)
 });
 
 // https://hackernoon.com/how-to-use-google-sheets-api-with-nodejs-cz3v316f
