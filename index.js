@@ -1,6 +1,7 @@
 const express = require("express");
 const { google } = require('googleapis')
 const sheets = google.sheets('v4');
+const cors = require('cors');
 
 // export GOOGLE_APPLICATION_CREDENTIALS=./keys.json
 // export GCLOUD_PROJECT=tactile-cinema-384614
@@ -13,6 +14,12 @@ const range = "A2:G"
 const PORT = process.env.PORT || 3001;
 
 const app = express();
+
+const corsOptions = {
+  origin: ['http://localhost:3000', 'https://trade-calculator-web.herokuapp.com/'],
+  optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+};
+app.use(cors(corsOptions));
 
 
 async function getAuthToken() {
