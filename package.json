@@ -23,6 +23,7 @@
     "googleapis": "^118.0.0"
   },
   "devDependencies": {
+    "dotenv": "^16.4.4",
     "heroku": "^8.0.6"
   }
 }
