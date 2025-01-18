@@ -12,7 +12,8 @@
     "creds": "heroku buildpacks:set https://github.com/buyersight/heroku-google-application-credentials-buildpack.git -a frozen-headland-24495",
     "log": "heroku logs --tail",
     "dino": "heroku ps:scale web=1",
-    "add": "heroku access:add chris@thedynastydugout.com"
+    "add": "heroku access:add chris@thedynastydugout.com",
+    "deploy": "git push heroku main"
   },
   "author": "",
   "license": "ISC",
