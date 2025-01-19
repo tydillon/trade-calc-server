@@ -7,7 +7,8 @@ const cors = require('cors');
 
 const SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly']
 const spreadsheetId = process.env.SPREADSHEET_ID
-const sheetName = [{sheetName: "Sheet1", setName: "12-Team"}, {sheetName: "Sheet2", setName: "15-Team"}, {sheetName: "Sheet3", setName: "20-Team"}, {sheetName: "Sheet4", setName: "12-Team OBP"}, {sheetName: "Sheet5", setName: "15-Team OBP"}, {sheetName: "Sheet6", setName: "20-Team OBP"}]
+// const sheetName = [{sheetName: "Sheet1", setName: "12-Team"}, {sheetName: "Sheet2", setName: "15-Team"}, {sheetName: "Sheet3", setName: "20-Team"}, {sheetName: "Sheet4", setName: "12-Team OBP"}, {sheetName: "Sheet5", setName: "15-Team OBP"}, {sheetName: "Sheet6", setName: "20-Team OBP"}]
+const sheetName = [{sheetName: "RotoValues", setName: "Roto Values"}, {sheetName: "Points", setName: "Points"}]
 const range = "A2:G"
 
 const PORT = process.env.PORT || 3001;
