@@ -3,7 +3,7 @@ const { google } = require('googleapis')
 const sheets = google.sheets('v4');
 const cors = require('cors');
 //only use for local development, comment out for deploy
-// require('dotenv').config()
+require('dotenv').config()
 
 const SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly']
 const spreadsheetId = process.env.SPREADSHEET_ID
