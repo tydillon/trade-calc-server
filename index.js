@@ -22,6 +22,11 @@ const corsOptions = {
   exposedHeaders: ['Content-Type', 'Authorization', 'Access-Control-Allow-Origin'] // expose the header to the client
 };
 app.use(cors(corsOptions));
+app.use((req, res, next) => {
+  res.setHeader("X-Frame-Options", "ALLOW-FROM https://beehiiv.com");
+  next();
+});
+
 
 
 async function getAuthToken() {
