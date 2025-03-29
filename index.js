@@ -10,7 +10,7 @@ const spreadsheetId = process.env.SPREADSHEET_ID
 const tcSheetName = [{sheetName: "RotoValues", setName: "Roto Values"}, {sheetName: "Points", setName: "Points"}]
 const tcRange = "A2:G"
 const baRange = "A2:I"
-const baSheetName = [{sheetName: "Sheet7"}]
+const baSheetName = [{sheetName: "Dynasty", setName: "Dynasty"}, {sheetName: "Prospects", setName: "Prospects"}]
 
 const PORT = process.env.PORT || 3001;
 
@@ -28,10 +28,10 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use((req, res, next) => {
-  res.setHeader('Content-Security-Policy', "frame-ancestors 'self' https://www.thedynastydugout.com");
-  next();
-});
+// app.use((req, res, next) => {
+//   res.setHeader('Content-Security-Policy', "frame-ancestors 'self' https://www.thedynastydugout.com");
+//   next();
+// });
 
 async function getAuthToken() {
   const auth = new google.auth.GoogleAuth({
