@@ -10,24 +10,28 @@ const spreadsheetId = process.env.SPREADSHEET_ID
 const tcSheetName = [{sheetName: "RotoValues", setName: "Roto Values"}, {sheetName: "Points", setName: "Points"}]
 const tcRange = "A2:G"
 const baRange = "A2:I"
-const baSheetName = [{sheetName: "Sheet7"}]
+const baSheetName = [{sheetName: "Dynasty", setName: "Dynasty"}, {sheetName: "Prospects", setName: "Prospects"}]
 
 const PORT = process.env.PORT || 3001;
 
 const app = express();
 
 const corsOptions = {
-  origin: ['http://localhost:3000', 'https://dynasty-dugout-trade-calc.herokuapp.com'],
+  origin: ['http://localhost:3000', 'http://localhost:5173', 'https://dynasty-dugout-trade-calc.herokuapp.com', 'https://www.thedynastydugout.com', 'https://dynasty-dugout-best-available-71893ebf588b.herokuapp.com/'],
   optionsSuccessStatus: 200,
   allowedHeaders: ['Content-Type', 'Authorization'],
   exposedHeaders: ['Content-Type', 'Authorization', 'Access-Control-Allow-Origin'] // expose the header to the client
 };
 app.use(cors(corsOptions));
 app.use((req, res, next) => {
-  res.setHeader("X-Frame-Options", "ALLOW-FROM https://beehiiv.com");
+  res.setHeader('X-Frame-Options', 'ALLOWALL');
   next();
 });
 
+// app.use((req, res, next) => {
+//   res.setHeader('Content-Security-Policy', "frame-ancestors 'self' https://www.thedynastydugout.com");
+//   next();
+// });
 
 async function getAuthToken() {
   const auth = new google.auth.GoogleAuth({
