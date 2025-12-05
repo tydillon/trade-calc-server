@@ -17,7 +17,7 @@ const PORT = process.env.PORT || 3001;
 const app = express();
 
 const corsOptions = {
-  origin: ['http://localhost:3000', 'http://localhost:5173', 'https://dynasty-dugout-trade-calc.herokuapp.com', 'https://www.thedynastydugout.com', 'https://dynasty-dugout-best-available-71893ebf588b.herokuapp.com'],
+  origin: ['http://localhost:3000', 'http://localhost:5173', 'https://dynasty-dugout-trade-calc.herokuapp.com', 'https://www.thedynastydugout.com', 'https://dynasty-dugout-best-available-71893ebf588b.herokuapp.com', 'https://embed-trade-calc-73f4f1379af6.herokuapp.com/'],
   optionsSuccessStatus: 200,
   allowedHeaders: ['Content-Type', 'Authorization'],
   exposedHeaders: ['Content-Type', 'Authorization', 'Access-Control-Allow-Origin'] // expose the header to the client
